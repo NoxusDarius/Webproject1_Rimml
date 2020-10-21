@@ -1,0 +1,46 @@
+﻿@model  WebApp.Models.Login
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<form action="/user/Login" method="post">
+
+    <table>
+        <thread>
+            <tbody>
+                <tr>
+                    <td><label>username</label></td>
+                    <td><input type="text" name="username" id="username" /></td>
+
+
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td><input type="password" name="password" id="password" /></td>
+
+
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" name="email" id="email" /></td>
+
+
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align:center">
+                        <input type="submit" value="Einlogen" />
+                        <input type="reset" value="zurücksetzen" />
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+
+            </tfoot>
+        </thread>
+    </table>
+
+
+</form>
