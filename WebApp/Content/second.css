@@ -1,0 +1,216 @@
+﻿body {
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: url(Arktis4.jpg);
+    background-size: cover;
+}
+
+.box {
+    position: absolut;
+    transform: translate(145%, 25%);
+    top: 150%;
+    left: 150%;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0.5);
+    border-radius: 10px;
+}
+
+    .box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .box .usernameBox {
+        position: relative;
+    }
+
+        .box .usernameBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box .usernameBox label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .box .usernameBox input:focus ~ label,
+        .box .usernameBox input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+    .box .passwordBox {
+        position: relative;
+    }
+
+        .box .passwordBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box .passwordBox label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: -0.5s;
+        }
+
+        .box .passwordBox input:focus ~ label,
+        .box .passwordBox input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+    .box .PlzBox {
+        position: relative;
+    }
+
+        .box .PlzBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box .PlzBox label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .box .PlzBox input:focus ~ label,
+        .box .PlzBox input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+    .box .WohnortBox {
+        position: relative;
+    }
+
+        .box .WohnortBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box .WohnortBox label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .box .WohnortBox input:focus ~ label,
+        .box .WohnortBox input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+    .box .emailBox {
+        position: relative;
+    }
+
+        .box .emailBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid #fff;
+        }
+
+        .box .emailBox label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .box .emailBox input:focus ~ label,
+        .box .emailBox input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+    .box input[type="submit"] {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #03a9f4;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
