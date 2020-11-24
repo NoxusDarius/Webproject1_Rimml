@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "NewYork";
+}
+<!-- <link id="pagestyle" rel="stylesheet" href="~/css/newYork.css" />-->
+<p>jmzfu,uk.revtghzju</p>
+@if ((Model == null) || (Model.Count == 0))
+{
+    <p>
+        Es sind keine Artikel im Shop vorhanden!
+    </p>
+}
+else
+{
+    // alle Artike in Tabellenform ausgeben
+    <table>
+        <thead>
+            <tr>
+                <td colspan="5">Shopartikel</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ID</td>
+                <td>Name of the City</td>
+                <td>Sightseeing</td>
+                <td>Description</td>              
+            </tr>
+            @foreach (Article a in Model)
+            {
+                <tr>
+                    <td>@a.CityId</td>
+                    <td>@a.Cityname</td>
+                    <td>@a.Sightseeing</td>
+                    <td>@a.Description</td>
+
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">alle Artikel unseres Shops</td>
+            </tr>
+        </tfoot>
+    </table>
+}
