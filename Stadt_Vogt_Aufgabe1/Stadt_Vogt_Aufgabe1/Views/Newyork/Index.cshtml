@@ -1,9 +1,9 @@
-﻿@using Stadt_Vogt_Aufgabe1.Models; 
+﻿@using Stadt_Vogt_Aufgabe1.Models;
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+
 
 @if ((Model == null) || (Model.Count == 0))
 {
@@ -14,35 +14,43 @@
 else
 {
     // alle Artike in Tabellenform ausgeben
-    <table>
-        <thead>
-            <tr>
-                <td colspan="5">Shopartikel</td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Artikel-ID</td>
-                <td>Artikelname</td>
-                <td>Artikelbeschreibung</td>
-                <td>Erscheinungsdatum</td>
-                <td>Preis</td>
-            </tr>
-            @foreach (Article a in Model)
-            {
-                <tr>
-                    <td>@a.CityId</td>
-                    <td>@a.Cityname</td>
-                    <td>@a.Sightseeing</td>
-                    <td>@a.Description</td>
-                   
-                </tr>
-            }
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5">alle Artikel unseres Shops</td>
-            </tr>
-        </tfoot>
-    </table>
+    <section>
+        <!--for demo wrap-->
+        <h1>Fixed Table header</h1>
+        <div class="tbl-header">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <thead>
+                    <tr>
+                        <th>Code</th>
+                        <th>Company</th>
+                        <th>Price</th>
+                        <th>Change</th>
+                        <th>Change %</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tbody>
+                    @foreach (Article a in Model)
+                    {
+                        <tr>
+                            <td>@a.CityId</td>
+                            <td>@a.Cityname</td>
+                            <td>@a.Sightseeing</td>
+                            <td>@a.Description</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
 }
+
+
+
+

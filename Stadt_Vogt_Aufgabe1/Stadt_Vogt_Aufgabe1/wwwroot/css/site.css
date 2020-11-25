@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-#changeImg {
-    cursor: pointer;
+
+.Content{
+    margin:0;
+    padding: 70px;
 }
-.probe1{
-    opacity:0;
-}
+
 .banner {
     position: relative;
     width: 100%;
@@ -28,15 +28,10 @@ p {
     text-align: justify;
     line-height: 30px;
 }
-/*
-.sec1 {
-  background: url(Arktis.jpg) no-repeat 50% 50%;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-}
-*/
 body {
+    background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+    background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0, 1));
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     background-color: black;
 }
@@ -53,17 +48,11 @@ header {
     padding: 50px 100px;
     z-index: 1000000;
 }
-    /*header .logo {
-  display: flex;
-  justify-content: center;
-  padding-left: 120px;
-  min-height: 100vh;
-  flex-direction: column;
-}*/
+
     header.sticky {
         padding: 10px 100px;
         background: #151515;
-        opacity: 0.4;
+        opacity: 1;
     }
 
     header ul {
@@ -84,8 +73,7 @@ header {
                 margin: 0 15px;
                 color: #d8d8d8;
                 letter-spacing: 2px;
-                /* font-weight: 500px;
-                transition: 0.5sec; */
+                
             }
 
 .hamburger-nav {
@@ -347,16 +335,6 @@ a span:nth-child(4) {
     }
 }
     
-p {
-    font-size: 20px;
-    color: #d8d8d8;
-    font-family: "Mukta", sans-serif;
-    font-family: "Noto Sans JP", sans-serif;
-    text-align: center;
-    margin: 30px auto;
-    width: 900px;
-    text-align: justify;
-    line-height: 30px;
-}
+
 
 

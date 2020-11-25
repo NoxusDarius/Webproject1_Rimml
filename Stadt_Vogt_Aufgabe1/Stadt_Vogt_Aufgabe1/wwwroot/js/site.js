@@ -22,14 +22,20 @@ document.getElementById("pagestyle").setAttribute("href", sheet);
 
 }*/
 $(function () {
-    $('#lul').click(function (e) {
+    $('#changeN').click(function (e) {
         $('#pagestyle').attr('href', $(this).attr('rel'));
         e.preventDefault();
-        window.location.href = "../Home/NewYork";
+
     });
-    
-    
-
-
-
 });
+
+
+
+
+
+    /* For Table */
+
+    $(window).on("load resize ", function () {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({ 'padding-right': scrollWidth });
+    }).resize();
