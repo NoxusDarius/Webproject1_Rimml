@@ -1,0 +1,28 @@
+﻿
+
+
+@model Stadt_Vogt_Aufgabe1.Models.Login
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>In</h1>
+
+<h1>Hallo scghneidercsfg</h1>
+<form method="post" asp-controller="user" asp-action="login">
+
+    <label asp-for="Benutzer">Benutzername *</label><br />
+    <input name="Benutzer" type="text" asp-for="Benutzer"><br />
+    <span asp-validation-for="Benutzer" class="text-danger" style="font-size: 85%"></span><br />
+
+    <label asp-for="Password">Passwort *</label><br />
+    <input name="Password" type="password" asp-for="Password"><br />
+    <span asp-validation-for="Password" class="text-danger" style="font-size: 85%"></span><br />
+
+    <input type="submit"  value="Anmelden" />
+
+
+   
+
+
+</form>

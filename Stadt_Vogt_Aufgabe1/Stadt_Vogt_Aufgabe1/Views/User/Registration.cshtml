@@ -1,0 +1,35 @@
+﻿
+
+@model Stadt_Vogt_Aufgabe1.Models.SiteRegistration
+@{
+    ViewData["Title"] = "Registration";
+}
+
+
+<h1>Registration</h1>
+
+<form method="post" asp-controller="user" asp-action="Registration">
+    <label asp-for="Benutzer">Benutzername *</label><br />
+    <input name="Benutzer" type="text" asp-for="Benutzer"><br />
+    <span asp-validation-for="Benutzer" class="text-danger" style="font-size: 85%"></span><br />
+
+    <label asp-for="Password">Passwort *</label><br />
+    <input name="Password" type="password" asp-for="Password"><br />
+    <span asp-validation-for="Password" class="text-danger" style="font-size: 85%"></span><br />
+
+    <label asp-for="PLZ">PLZ *</label><br />
+    <input name="PLZ" type="number" asp-for="PLZ"><br />
+    <span asp-validation-for="PLZ" class="text-danger" style="font-size: 85%"></span><br />
+
+    <label asp-for="Email">Email </label><br />
+    <input name="EMAIL" type="email" asp-for="Email"><br />
+    <span asp-validation-for="Email" class="text-danger" style="font-size: 85%"></span><br />
+
+    <label asp-for="Wohnort">Wohnort </label><br />
+    <input name="Wohnort" type="text" asp-for="Wohnort"><br />
+    <span asp-validation-for="Wohnort" class="text-danger" style="font-size: 85%"></span><br />
+
+    <input type="submit" value="Anmelden" />
+
+</form>
+

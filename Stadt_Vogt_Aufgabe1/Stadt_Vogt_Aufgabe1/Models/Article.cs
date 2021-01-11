@@ -18,14 +18,7 @@ namespace Stadt_Vogt_Aufgabe1.Models
         
         public Country Country { get; set; }
 
-        /*
-         int ... Ganzzahlen von ~-2Mrd. bis ~+2Mrd.
-         int? ... Ganzzahlen von ~-2Mrd. bis ~+2Mrd. und zusätzlich null
-        int? zahl = null;
-        double? wert = null;
-        */
-
-        // ctors
+      
         public Article() : this(0, "", "", "",Country.notSpecified) { }
         public Article(int cityid, string cityname, string sightseeing,
             string description, Country country)
@@ -37,7 +30,7 @@ namespace Stadt_Vogt_Aufgabe1.Models
             this.Country = country;
         }
 
-        // ToString() überschreiben
+       
         public override string ToString()
         {
             return this.CityId + " " + this.Cityname + " " + this.Sightseeing;

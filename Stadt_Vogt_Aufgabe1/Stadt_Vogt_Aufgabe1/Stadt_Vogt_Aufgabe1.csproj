@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="MySql.Data" Version="8.0.22" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\DB\Scripts\" />
     <Folder Include="wwwroot\Img\" />
   </ItemGroup>
 
