@@ -1,0 +1,29 @@
+﻿@model Vogt_Aufgabe_1_Rimml.Models.Article
+@{
+    ViewData["Title"] = "CreateNewArticle";
+}
+
+
+<h3>Neuen Artikel erzeugen</h3>
+
+<!-- Formular mit Hilfe von HTML und ASP.NET Core erzeugen -->
+
+<form asp-controller="shop" asp-action="createNewArticle" method="post">
+
+    <label asp-for="Name">Artikelname*</label><br />
+    <input asp-for="Name" /> <br />
+    <!-- an dieser Stelle wird die Fehlermeldung angezeigt, falls notwendig-->
+    <span asp-validation-for="Name" ></span> <br />
+
+
+    <label asp-for="Price">Artikelpreis*</label><br />
+    <input asp-for="Price" /> <br />
+    <span asp-validation-for="Price" ></span> <br />
+
+    <label asp-for="Description">Beschreibung</label><br />
+    <textarea asp-for="Description" rows="10" cols="40"></textarea><br />
+    <span asp-validation-for="Description" ></span> <br />
+
+    <input type="submit" value="Artikel erzeugen" />
+    <input type="reset" value="abbrechen" />
+</form>

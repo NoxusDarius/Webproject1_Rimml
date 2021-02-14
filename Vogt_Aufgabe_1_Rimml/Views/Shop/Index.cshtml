@@ -1,0 +1,62 @@
+﻿@using Vogt_Aufgabe_1_Rimml.Models
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="stylesheet" href="~/css/shop.css" />
+
+<!--<div class="box">
+    <a class="neonButton" asp-controller="shop" asp-action="CreateNewArticle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       Create New Article
+    </a>
+    </div>-->
+
+@if ((Model == null || Model.Count == 0))
+{
+    <p>
+        Es sind keine Artikel im Shop vorhanden.
+    </p>
+}
+else
+{
+
+    // alle Artikel in Tabellenform ausgeben
+
+
+
+    @foreach (Article a in Model)
+    {
+        for (int i = 0; i < 100000; i++)
+            if (a.Article_ID == i)
+            {<div id="Article" class="a_@a.Article_ID">
+                 <div class="Fill">
+                   
+                     <p class="ArticleName">   @a.Name      </p>
+                     <p class="ArticleName">  @a.Description </p>
+                     <p class="ArticleName">  @a.Price €</p>
+                 </div>
+             </div> 
+            }
+
+        <!--  <td>
+           <form action="/shop/delete/@a.Article_ID" method="post">
+                <input type="submit" value="löschen" />
+            </form>
+        </td>
+              <td>
+                  <form action="/shop/update/@a.Article_ID" method="post">
+                      <input type="submit" value="ändern" />
+                  </form>
+              </td>-->
+    }
+
+
+
+}
+
+
+

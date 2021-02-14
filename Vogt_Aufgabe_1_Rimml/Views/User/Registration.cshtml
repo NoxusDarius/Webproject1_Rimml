@@ -1,0 +1,51 @@
+﻿@model Vogt_Aufgabe_1_Rimml.Models.registration;
+@{
+    ViewData["Title"] = "Registration";
+}
+
+
+<link rel="stylesheet" href="~/css/registration.css" />
+
+
+
+<div class="registration-box">
+
+    <h1>Log In</h1>
+
+    <form method="post" asp-controller="user" asp-action="Registration">
+
+        <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input name="Benutzer" type="text" asp-for="Benutzer" placeholder="Username"><br />
+            <span asp-validation-for="Benutzer"></span><br />
+        </div>
+        <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input name="Password" type="password" asp-for="Password" placeholder="Passwort"><br />
+            <span asp-validation-for="Password"></span><br />
+        </div>
+        <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input name="Password2" type="password" asp-for="Password2" placeholder="Passwort"><br />
+            <span asp-validation-for="Password2"></span><br />
+        </div>
+        <div class="textbox">
+        
+            <input name="PLZ" type="number" asp-for="PLZ" placeholder="PLZ"><br />
+            <span asp-validation-for="PLZ"></span><br />
+        </div>
+        <div class="textbox">
+          
+            <input name="EMAIL" type="email" asp-for="Email" placeholder="Email"><br />
+            <span asp-validation-for="Email"></span><br />
+        </div>
+        <div class="textbox">
+          
+            <input name="Wohnort" type="text" asp-for="Wohnort" placeholder="Domicile"><br />
+            <span asp-validation-for="Wohnort"></span><br />
+        </div>
+        <input class="btn" type="submit" value="Anmelden" />
+
+    </form>
+
+</div>

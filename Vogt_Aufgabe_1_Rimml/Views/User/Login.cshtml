@@ -1,0 +1,32 @@
+﻿@model Vogt_Aufgabe_1_Rimml.Models.login;
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<link rel="stylesheet" href="~/css/login.css" />
+
+
+
+<div class="login-box">
+
+    <h1>Log In</h1>
+   
+    <form method="post" asp-controller="user" asp-action="login">
+
+        <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input name="Benutzer" type="text" asp-for="Benutzer" placeholder="Username"><br />
+            <span asp-validation-for="Benutzer"></span><br />
+        </div>
+        <div class="textbox">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input name="Password" type="password" asp-for="Password" placeholder="Passwort"><br />
+            <span asp-validation-for="Password"></span><br />
+        </div>
+            <input class="btn" type="submit" value="Anmelden" />
+
+    </form>
+  
+</div>
+
