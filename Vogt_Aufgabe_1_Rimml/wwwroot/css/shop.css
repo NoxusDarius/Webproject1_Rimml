@@ -60,6 +60,10 @@
     background: url("../Img/Canada3.jpg") center no-repeat;
     background-size: cover;
 }
+.a_8 {
+    background: url("../Img/Tyler1.jpg") center no-repeat;
+    background-size: cover;
+}
 #Article:hover .ArticleName {
     color: black;
     transition: 5s;
@@ -85,4 +89,9 @@
 }
 .ArticleName{
     display:none;
+}
+.buttonarticle{
+    position: fixed;
+    top:200px;
+    left:200px;
 }

@@ -20,6 +20,6 @@ namespace Vogt_Aufgabe_1_Rimml.Models
             this.Solution = solution;
         }
 
-        // ToString() - bitte immer programmieren
+       
     }
 }

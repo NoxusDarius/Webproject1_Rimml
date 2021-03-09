@@ -1,8 +1,15 @@
-﻿
+﻿@using Vogt_Aufgabe_1_Rimml.Models
+@using Microsoft.AspNetCore.Http
 @{
     ViewData["Title"] = "SuccesfullAdmin";
 }
 
 <h1>SuccesfullAdmin</h1>
+<p>@Context.Session.GetString("login")</p>
+<p>
+    Hallo Sie si
+    nd Admin
+    @Vogt_Aufgabe_1_Rimml.Controllers.UserController.id
+</p>
 
-<p> Hallo Sie sind Admin </p>
+

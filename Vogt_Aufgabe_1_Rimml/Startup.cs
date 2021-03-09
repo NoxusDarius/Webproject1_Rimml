@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -8,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace Vogt_Aufgabe_1_Rimml
 {
@@ -23,12 +25,25 @@ namespace Vogt_Aufgabe_1_Rimml
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddMvc();
+            services.AddSession(options => {
+                options.IdleTimeout = TimeSpan.FromMinutes(60);
+
+            });
         }
 
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "MVC1005:Cannot use UseMvc with Endpoint Routing.", Justification = "<Ausstehend>")]
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseSession();
+            //  var applicationBuilder = app.UseMvc();
+            /* app.Run(context => {
+                 return context.Response.WriteAsync("index","home") ;
+             });
+            */
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

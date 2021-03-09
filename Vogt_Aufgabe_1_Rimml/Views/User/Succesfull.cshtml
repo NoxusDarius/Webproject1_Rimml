@@ -1,4 +1,6 @@
-﻿
+﻿@using Vogt_Aufgabe_1_Rimml.Models
+@using Microsoft.AspNetCore.Http
+@using static Vogt_Aufgabe_1_Rimml.Controllers.UserController
 @{
     ViewData["Title"] = "Succesfull";
 }
@@ -6,3 +8,21 @@
 <h1>Succesfull</h1>
 
 <p> Ihr Login war erfolgreich</p>
+
+
+    <p>@Context.Session.GetString("login")</p>
+
+
+
+
+
+<p>  @Vogt_Aufgabe_1_Rimml.Controllers.UserController.id
+    </p>
+
+   
+
+
+
+
+
+

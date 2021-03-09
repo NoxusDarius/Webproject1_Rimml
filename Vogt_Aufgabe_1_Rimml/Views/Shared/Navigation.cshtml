@@ -1,6 +1,12 @@
-﻿<nav>
+﻿@using Microsoft.AspNetCore.Http
+
+<nav>
     <ul class="nav-links">
-        <li><a id="left" asp-controller="user" asp-action="Index">Login </a> </li>
+      @if (Context.Session.GetString("login") == null)
+      {   <li><a id="left" asp-controller="user" asp-action="Index">Login </a> </li>
+      }else
+      { <li><a id="left" asp-controller="user" asp-action="Logout">Logout </a> </li>
+      }
         <li><a id="left" asp-controller="cities" asp-action="Index">Landkarte </a> </li>
     </ul>
     <div class="logo">

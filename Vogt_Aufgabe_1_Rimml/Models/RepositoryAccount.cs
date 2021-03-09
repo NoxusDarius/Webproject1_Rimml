@@ -10,13 +10,13 @@ namespace Vogt_Aufgabe_1_Rimml.Models
 {
     public class RepositoryAccount : IRepositoryAccount
     {
-        // die Daten des MySQL-Servers angeben
+       
         private string _connectionString = "server=localhost;database=db_Accounts;user=root;pwd=Airbase11";
 
         private MySqlConnection _conn = null;
         
 
-        /// diese Methode ist für das Öffnen der DB-Verbindung zuständig 
+       
 
         public void Open()
         {
