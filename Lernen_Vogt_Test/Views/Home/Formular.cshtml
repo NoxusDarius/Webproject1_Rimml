@@ -1,0 +1,23 @@
+﻿@model Lernen_Vogt_Test.Models.Article
+@{
+    ViewData["Title"] = "Formular";
+}
+
+<h1>Formular</h1>
+<form asp-controller="home" asp-action="formular" method="post">
+    <label asp-for="name"> Name: *</label>
+    <input asp-for="name" />
+    <span asp-validation-for="name"></span> <br />
+    <label asp-for="preis"> Preis: *</label>
+    <input asp-for="preis" />
+    <span asp-validation-for="preis"></span> <br />
+    <label asp-for="beschreibung"> Beschreibung: *</label>
+    <input asp-for="beschreibung" />
+    <span asp-validation-for="beschreibung"></span> <br />
+    <input type="submit" value="Artikel erzeugen" />
+    <input type="reset" value="abbrechen" />
+</form>
+
+
+
+

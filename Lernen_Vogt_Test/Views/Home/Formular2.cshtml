@@ -1,0 +1,17 @@
+﻿@model Lernen_Vogt_Test.Models.Article
+@using Lernen_Vogt_Test.Models;
+
+@{
+    ViewData["Title"] = "Formular2";
+}
+
+
+
+<h1>GetArticleByID</h1>
+
+<form asp-controller="home" asp-action="GetArticleByID" method="post">
+    <label asp-for="article_ID"> Name: *</label>
+    <input asp-for="article_ID" />
+    <span asp-validation-for="article_ID"></span> <br />
+</form>
+

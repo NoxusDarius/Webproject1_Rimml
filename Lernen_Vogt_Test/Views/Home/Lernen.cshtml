@@ -1,0 +1,56 @@
+﻿@using Lernen_Vogt_Test.Models
+
+@{
+    ViewData["Title"] = "Lernen";
+}
+
+<h1>Lernen</h1>
+
+
+
+
+
+@if ((Model == null || Model.Count == 0))
+{
+    <p>
+        Es sind keine Artikel im Shop vorhanden.
+    </p>
+}
+else
+{
+
+
+
+
+    @foreach (Article a in Model)
+    {
+        for (int i = 0; i < 100000; i++)
+            if (a.article_ID == i)
+            {<div id="Article" class="a_@a.article_ID">
+                    <div class="Fill">
+
+                        <p class="ArticleName">   @a.name      </p>
+                        <p class="ArticleName">  @a.beschreibung </p>
+                        <p class="ArticleName">  @a.preis €</p>
+                        <!-- <a asp-controller="home" asp-action="Delete" value="@a.article_ID">Click me do Delete something</a>-->
+
+                        <form action="/home/Delete/@a.article_ID" method="post">
+                            <input type="hidden" name="article_ID" value="@a.article_ID" />
+                            <input type="submit" value="@a.article_ID" />
+                        </form>
+                    </div>
+                </div>
+            }
+
+
+    }
+
+
+    <a asp-controller="home" asp-action="Update">Click me do update something</a>
+
+
+
+
+}
+
+
