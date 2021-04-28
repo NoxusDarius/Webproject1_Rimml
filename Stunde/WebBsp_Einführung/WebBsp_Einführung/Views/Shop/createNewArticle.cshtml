@@ -1,0 +1,50 @@
+﻿@model WebBsp_Einführung.Models.Article
+@{
+    ViewData["Title"] = "createNewArticle";
+}
+
+<h1>neuen Artikel anlegen</h1>
+
+<form asp-controller="shop" asp-action="CreateNewArticle" method="post">
+    <label asp-for="ArticleName">Artieklname *</label>
+    <input asp-for="ArticleName" /><br />
+    <!-- an dieser Stelle wird eine Fehlermeldung angezeigt, aber nur bei Bedarf-->
+    <span asp-validation-for="ArticleName" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Price">Artikelpreis *</label>
+    <input asp-for="Price" /><br />
+    <!-- an dieser Stelle wird eine Fehlermeldung angezeigt, aber nur bei Bedarf-->
+    <span asp-validation-for="Price" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Brand">Hersteller</label>
+    <!--normalerweise würden wir ein Input-Feld verwenden
+        nur zur Demo: wir verwenden eine textarea-->
+
+    <textarea asp-for="Brand" rows="10" cols="40"></textarea><br />
+    <!-- an dieser Stelle wird eine Fehlermeldung angezeigt, aber nur bei Bedarf-->
+
+    <label asp-for="ReleaseDate">Erschienungsdatum *</label>
+    <input asp-for="ReleaseDate" type="date" /><br />
+    <!-- an dieser Stelle wird eine Fehlermeldung angezeigt, aber nur bei Bedarf-->
+    <span asp-validation-for="ReleaseDate" class="text-danger" style="font-size:85%"></span><br />
+
+    <label asp-for="Category">Kategorie *</label>
+    <select asp-for="Category">
+        <option value="notSpecified">bitte auswählen</option>
+        <option value="Books">Bücher</option>
+        <option value="Handies">Handys</option>
+        <option value="Laptops">Laptops</option>
+        <option value="Computers">Computer</option>
+        <option value="Technigs">Technik</option>
+    </select><br />
+    <!-- an dieser Stelle wird eine Fehlermeldung angezeigt, aber nur bei Bedarf-->
+    <span asp-validation-for="Category" class="text-danger" style="font-size:85%"></span><br />
+
+    <input type="submit" value="Artikel abspeichern" />
+    <input type="reset" value="abbrechen" />
+</form>
+
+
+@section Scripts{
+    <script src="~/js/formValidationNewArticle.js"></script>
+ }

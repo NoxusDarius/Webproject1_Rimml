@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Formular nur mit HTML erzeugen</h1>
+
+<!--
+    form ... Formular erzeugen
+    action ... wohin soll das Formular gesendet werden
+    mehtode  ... Methode der Formularübermittlung
+        post ... die Daten sind nicht sichtbar
+        get ... die Daten sind in der Adresszeile des Browsers sichtbar
+
+-->
+
+<form action="/home/checkForm" mehtod="post">
+
+    <!--Beschrifftungsfled-->
+    <label for="fistname">Vorname</label><br />
+
+    <input for="text" id="firstname" name="firstname"><br />
+
+    <!--textarea ... mehrzeiliges Textfeld-->
+    <label for="description">Beschreibung</label><br />
+    <textarea id="description" name="description" rows="10" cols="50">Bitte Beschreibung eingeben</textarea><br />
+
+    <!--
+        type="radio" ... Radiobuttons (für die AUswahl eines einzigen Elements)
+        value ... dieser Wert wird an den Server übertragen
+        wichtig: damit nur ein einziges Element ausgewählt werden kann, müssen alle zusammengehörigen Elemente den gleichen Wert bei
+        name (name="gender") haben
+
+        -->
+    <label for="gender">Geschlecht</label><br />
+    <input type="radio" id="gender" name="gender" value="male" />männlich<br />
+    <input type="radio" id="gender" name="gender" value="female" />weiblich<br />
+    <input type="radio" id="gender" name="gender" value="notSpecified" />nicht angegeben<br />
+
+    <label for="hobbies">Hobbies</label><br />
+    <input type="checkbox" id="hobbies" name="hobbies" value="sport" />sport<br />
+    <input type="checkbox" id="hobbies" name="hobbies" value="dancing" />dancing<br />
+    <input type="checkbox" id="hobbies" name="hobbies" value="reading" />nicht reading<br />
+    <input type="checkbox" id="hobbies" name="hobbies" value="computer" />computer<br />
+
+
+    <label for="department">Abteilungen</label><br />
+    <select id="department" name="department">
+        <option value="wi">Wirtschaftsingenieure</option>
+        <option value="el">Elektronik</option>
+        <option value="mb">Maschienenbau</option>
+        <option value="et">Elektrotechnik</option>
+        <option value="bi">Bioimedizin</option>
+
+    </select><br />
+
+    <label for="color">Lieblingsfarbe</label><br />
+    <select id="colors" name="colors" multible="multible" size="4">
+        <option value="red">Rot</option>
+        <option value="green">Grün</option>
+        <option value="blue">Blau</option>
+        <option value="white">Weiß</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Gelb</option>
+
+    </select><br />
+
+    <label for="sinnlos">verstecktes Feld</label><br />
+    <input type="hidden" name="productID" id="produktID" /><br />
+
+    <!--
+        buttons
+           input type="submit"
+           input type="reset"
+           <button> ... für beliebige Buttons
+    -->
+
+    <input type="submit" value="absenden" />
+    <input type="reset" value="Werte zurüchsetzen" />
+    <button>klick mich</button>
+
+
+    <!--spezielle input Typen-->
+    <input type="color" name="color1" id="color1" /><br />
+    <input type="date" name="date1" id="date1" /><br />
+    <input type="number" name="age1" id="age1" /><br />
+    <input type="password" name="pw1" id="pw1" /><br />
+    <input type="range" name="range1" id="range1" min="100" max="140" value="130"/><br />
+
+
+
+
+</form>

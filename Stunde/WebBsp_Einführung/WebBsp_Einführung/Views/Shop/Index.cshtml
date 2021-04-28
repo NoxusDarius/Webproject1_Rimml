@@ -1,0 +1,52 @@
+﻿@using WebBsp_Einführung.Models
+@model List<Article>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*
+    @model ... hier muss de übergebene Datentyp (von der Actiionmethode) angeg. werden
+    @Model ... die Instanz von Typ wie in @model angegeben
+*@
+
+@if(Model == null || Model.Count == 0)
+{
+    <p>Es sind keine Artikel im Shop vorhanden</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <td colspan="6">Shopartikel</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Artikel-ID</td>
+                <td>Artikelname</td>
+                <td>Hersteller</td>
+                <td>Erscheinungsdatum</td>
+                <td>Preis</td>
+                <td>Kategorie</td>
+            </tr>
+            @foreach (Article item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.ArticleName</td>
+                    <td>@item.Brand</td>
+                    <td>@item.ReleaseDate</td>
+                    <td>@item.Price</td>
+                    <td>@item.Category</td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="6">unseren besonderen Artikel</td>
+            </tr>
+        </tfoot>
+    </table>
+}
